@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MH Toolkit builds cross-platform tools for classic Monster Hunter emulation, overlays, saves, and multiplayer on macOS and Android." />
+  <meta property="og:title" content="MH Toolkit" />
+  <meta property="og:description" content="Cross-platform toolkit for classic Monster Hunter emulation on macOS and Android." />
+  <meta property="og:image" content="https://mhtoolkit.github.io/assets/logo.jpg" />
+  <meta property="og:url" content="https://mhtoolkit.github.io" />
+  <title>MH Toolkit</title>
+  <link rel="icon" href="assets/logo.jpg" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #071019;
+      --panel: rgba(12, 26, 40, 0.78);
+      --panel-strong: rgba(18, 39, 58, 0.94);
+      --text: #ecf7ff;
+      --muted: #9fb4c6;
+      --line: rgba(150, 210, 255, 0.18);
+      --accent: #4dd2ff;
+      --accent-2: #89ffcb;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 18% 15%, rgba(77, 210, 255, 0.24), transparent 32rem),
+        radial-gradient(circle at 82% 18%, rgba(137, 255, 203, 0.16), transparent 28rem),
+        linear-gradient(145deg, #050910 0%, #071019 48%, #0a1722 100%);
+      color: var(--text);
+    }
+
+    a { color: inherit; }
+    .shell { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { padding: 28px 0 18px; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 14px; font-weight: 800; letter-spacing: 0.02em; }
+    .brand img { width: 44px; height: 44px; border-radius: 14px; box-shadow: 0 12px 28px var(--shadow); }
+    .links { display: flex; gap: 14px; color: var(--muted); font-size: 14px; }
+    .links a { text-decoration: none; }
+    .links a:hover { color: var(--text); }
+
+    .hero { padding: 78px 0 52px; display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 40px; align-items: center; }
+    .eyebrow { color: var(--accent-2); text-transform: uppercase; letter-spacing: 0.16em; font-size: 12px; font-weight: 800; }
+    h1 { margin: 16px 0 18px; font-size: clamp(44px, 8vw, 92px); line-height: 0.92; letter-spacing: -0.07em; }
+    .lead { margin: 0; max-width: 720px; color: var(--muted); font-size: clamp(18px, 2.4vw, 24px); line-height: 1.55; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .button { padding: 13px 18px; border-radius: 999px; text-decoration: none; font-weight: 800; border: 1px solid var(--line); background: var(--panel); }
+    .button.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #041014; border: 0; }
+    .logo-card { border: 1px solid var(--line); border-radius: 36px; background: var(--panel); padding: 34px; box-shadow: 0 24px 80px var(--shadow); backdrop-filter: blur(18px); }
+    .logo-card img { width: 100%; border-radius: 30px; display: block; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 18px 0 56px; }
+    .card { border: 1px solid var(--line); border-radius: 24px; background: var(--panel); padding: 22px; min-height: 190px; }
+    .card h2 { margin: 0 0 12px; font-size: 20px; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+    .status { margin: 0 0 80px; padding: 24px; border: 1px solid var(--line); border-radius: 28px; background: var(--panel-strong); color: var(--muted); }
+    .status strong { color: var(--text); }
+    footer { padding: 36px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; padding-top: 46px; }
+      .logo-card { max-width: 360px; }
+      .grid { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <nav>
+      <a class="brand" href="/" aria-label="MH Toolkit home">
+        <img src="assets/logo.jpg" alt="MH Toolkit logo" />
+        <span>MH Toolkit</span>
+      </a>
+      <div class="links">
+        <a href="https://github.com/MHToolkit/mh-toolkit">Toolkit</a>
+        <a href="https://github.com/MHToolkit/mh-overlay">Overlay</a>
+        <a href="https://github.com/MHToolkit/nemessix">Nemessix</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">macOS · Android · classic hunting tools</div>
+        <h1>MH Toolkit</h1>
+        <p class="lead">A focused toolkit for classic Monster Hunter emulation: overlays, save sync, multiplayer services, emulator setup, and game-specific configuration for macOS and Android.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/MHToolkit/mh-toolkit">View the roadmap</a>
+          <a class="button" href="https://github.com/MHToolkit">GitHub organization</a>
+        </div>
+      </div>
+      <div class="logo-card" aria-hidden="true">
+        <img src="assets/logo.jpg" alt="" />
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Project areas">
+      <article class="card">
+        <h2>Overlay</h2>
+        <p>Health display, damage display, and per-game customization designed to stay lightweight while preserving emulator performance.</p>
+      </article>
+      <article class="card">
+        <h2>Save and multiplayer services</h2>
+        <p>Cloud/self-hosted save sync, online room services, and LAN-first deployment paths for privacy-conscious players.</p>
+      </article>
+      <article class="card">
+        <h2>Nemessix first</h2>
+        <p>Phase one focuses on the Nemessix 3DS emulator while keeping the architecture ready for additional emulator integrations later.</p>
+      </article>
+    </section>
+
+    <p class="status"><strong>Status:</strong> planning and infrastructure bootstrap. Repositories are private while architecture, governance, and implementation boundaries are being prepared.</p>
+  </main>
+
+  <footer class="shell">
+    © 2026 MH Toolkit · Built on GitHub Pages
+  </footer>
+</body>
+</html>
