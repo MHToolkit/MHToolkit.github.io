@@ -10,17 +10,17 @@
   <meta property="og:url" content="https://mhtoolkit.github.io" />
   <title>MH Toolkit</title>
   <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/design-tokens.css" />
   <style>
     :root {
       color-scheme: dark;
-      --bg: #071019;
-      --panel: rgba(12, 26, 40, 0.78);
-      --panel-strong: rgba(18, 39, 58, 0.94);
-      --text: #ecf7ff;
-      --muted: #9fb4c6;
-      --line: rgba(150, 210, 255, 0.18);
-      --accent: #4dd2ff;
-      --accent-2: #89ffcb;
+      --bg: var(--surface-window);
+      --panel: var(--surface-sidebar);
+      --panel-strong: var(--surface-content);
+      --text: var(--label-primary);
+      --muted: var(--label-secondary);
+      --line: var(--separator);
+      --accent-2: var(--state-success);
       --shadow: rgba(0, 0, 0, 0.35);
     }
 
@@ -79,10 +79,10 @@
         <img src="assets/logo.png" alt="MH Toolkit Nemessix shield logo" />
         <span>MH Toolkit</span>
       </a>
-      <div class="links">
-        <a href="https://github.com/MHToolkit/mh-toolkit">Toolkit</a>
-        <a href="https://github.com/MHToolkit/mh-overlay">Overlay</a>
-        <a href="https://github.com/MHToolkit/nemessix">Nemessix</a>
+      <div class="links" aria-label="Project navigation">
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/MHToolkit/mh-toolkit">Releases</a>
+        <a href="https://github.com/MHToolkit">GitHub</a>
       </div>
     </nav>
   </header>
@@ -103,22 +103,30 @@
       </div>
     </section>
 
-    <section class="grid" aria-label="Project areas">
-      <article class="card">
-        <h2>Focused tool repositories</h2>
-        <p>Overlay, emulator integration, save sync, multiplayer and content tooling evolve in separate owner-led repositories instead of one overloaded implementation repo.</p>
+    <section class="grid" id="projects" aria-label="Project areas">
+      <article class="card project-link">
+        <h2><a href="https://github.com/MHToolkit/nemessix">Nemessix</a></h2>
+        <p>A capability-driven Nintendo engine platform with a unified library and platform-native multiplayer coordination.</p>
       </article>
-      <article class="card">
-        <h2>Hub-level releases</h2>
-        <p>The hub tracks repository responsibilities, integration gates, coordinated tags, release notes, and user-facing setup paths.</p>
+      <article class="card project-link">
+        <h2><a href="https://github.com/MHToolkit/mh-overlay">MH Overlay</a></h2>
+        <p>Fail-closed, version-aware battle information with native macOS and Android presentation.</p>
       </article>
-      <article class="card">
-        <h2>Nemessix first</h2>
-        <p>Phase one validates runtime behavior through Nemessix while the architecture stays ready for additional emulator adapters later.</p>
+      <article class="card project-link">
+        <h2><a href="https://github.com/MHToolkit/mh-save-sync">MH Save Sync</a></h2>
+        <p>Encrypted, conflict-preserving save history with explicit queue and recovery states.</p>
+      </article>
+      <article class="card project-link">
+        <h2><a href="https://github.com/MHToolkit/mh-field-map">MH Field Map</a></h2>
+        <p>Accessible field reference and map states designed for online and offline use.</p>
+      </article>
+      <article class="card project-link">
+        <h2><a href="https://github.com/MHToolkit/mh-toolkit">Coordinated releases</a></h2>
+        <p>Exact repository identities, platform support evidence, artifact hashes, and setup paths.</p>
       </article>
     </section>
 
-    <p class="status"><strong>Status:</strong> planning and infrastructure bootstrap. Repositories are private while architecture, governance, and implementation boundaries are being prepared.</p>
+    <p class="status" data-state="planning" role="status"><strong>Status:</strong> active platform development. Compatibility remains fail-closed until each product and artifact has reproducible evidence.</p>
   </main>
 
   <footer class="shell">
