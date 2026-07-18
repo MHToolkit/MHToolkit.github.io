@@ -33,6 +33,12 @@ a:focus-visible, button:focus-visible {
   align-items: center;
 }
 
+.project-link h2 a {
+  min-block-size: var(--target-minimum);
+  display: inline-flex;
+  align-items: center;
+}
+
 .project-link:hover { transform: translateY(-2px); }
 .status[data-state="planning"] { border-inline-start: 4px solid var(--state-warning); }
 

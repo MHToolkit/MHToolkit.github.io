@@ -1,0 +1,54 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "MH Toolkit home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "MH Toolkit Nemessix shield logo" [ref=e5]
+        - generic [ref=e6]: MH Toolkit
+      - navigation "Project navigation" [ref=e7]:
+        - link "Projects" [ref=e8] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Releases" [ref=e9] [cursor=pointer]:
+          - /url: https://github.com/MHToolkit/mh-toolkit
+        - link "GitHub" [ref=e10] [cursor=pointer]:
+          - /url: https://github.com/MHToolkit
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - generic [ref=e14]: macOS · Android · classic hunting tools
+      - heading "MH Toolkit" [level=1] [ref=e15]
+      - paragraph [ref=e16]: "An organization-level toolkit ecosystem for classic Monster Hunter emulation: focused repositories for overlays, emulator integration, saves, multiplayer, content tooling, and coordinated releases for macOS and Android."
+      - generic [ref=e17]:
+        - link "View the hub" [ref=e18] [cursor=pointer]:
+          - /url: https://github.com/MHToolkit/mh-toolkit
+        - link "GitHub organization" [ref=e19] [cursor=pointer]:
+          - /url: https://github.com/MHToolkit
+    - region "Project areas" [ref=e21]:
+      - article [ref=e22]:
+        - heading [level=2] [ref=e23]:
+          - link "Nemessix" [ref=e24] [cursor=pointer]:
+            - /url: https://github.com/MHToolkit/nemessix
+        - paragraph [ref=e25]: A capability-driven Nintendo engine platform with a unified library and platform-native multiplayer coordination.
+      - article [ref=e26]:
+        - heading [level=2] [ref=e27]:
+          - link "MH Overlay" [ref=e28] [cursor=pointer]:
+            - /url: https://github.com/MHToolkit/mh-overlay
+        - paragraph [ref=e29]: Fail-closed, version-aware battle information with native macOS and Android presentation.
+      - article [ref=e30]:
+        - heading [level=2] [ref=e31]:
+          - link "MH Save Sync" [ref=e32] [cursor=pointer]:
+            - /url: https://github.com/MHToolkit/mh-save-sync
+        - paragraph [ref=e33]: Encrypted, conflict-preserving save history with explicit queue and recovery states.
+      - article [ref=e34]:
+        - heading [level=2] [ref=e35]:
+          - link "MH Field Map" [ref=e36] [cursor=pointer]:
+            - /url: https://github.com/MHToolkit/mh-field-map
+        - paragraph [ref=e37]: Accessible field reference and map states designed for online and offline use.
+      - article [ref=e38]:
+        - heading [level=2] [ref=e39]:
+          - link "Coordinated releases" [ref=e40] [cursor=pointer]:
+            - /url: https://github.com/MHToolkit/mh-toolkit
+        - paragraph [ref=e41]: Exact repository identities, platform support evidence, artifact hashes, and setup paths.
+    - status [ref=e42]:
+      - strong [ref=e43]: "Status:"
+      - text: active platform development. Compatibility remains fail-closed until each product and artifact has reproducible evidence.
+  - contentinfo [ref=e44]: © 2026 MH Toolkit · Built on GitHub Pages

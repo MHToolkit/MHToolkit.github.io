@@ -20,9 +20,13 @@ class AppleDesignWebTests(unittest.TestCase):
 
     def test_project_navigation_exposes_all_user_products(self):
         html = (ROOT / "index.html").read_text()
+        tokens = (ROOT / "assets/design-tokens.css").read_text()
         for product in ("Nemessix", "MH Overlay", "MH Save Sync", "MH Field Map"):
             self.assertIn(product, html)
         self.assertIn('aria-label="Project navigation"', html)
+        self.assertIn('role="navigation"', html)
+        self.assertIn(".project-link h2 a", tokens)
+        self.assertIn("min-block-size: var(--target-minimum)", tokens)
         self.assertIn('data-state="planning"', html)
 
 
